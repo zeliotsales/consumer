@@ -13,7 +13,7 @@ const kafka = new Kafka({
     },
 });
 
-const consumer = kafka.consumer({ groupId: 'json-consumer-group-${Date.now()}'} );
+const consumer = kafka.consumer({ groupId: `json-consumer-group-${Date.now()}` });
 
 const consumeMessages = async () => {
     await consumer.connect();
